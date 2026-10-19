@@ -1,0 +1,400 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top, #312e81, #111827 60%);
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    padding: 25px 15px 15px;
+
+}
+
+header h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+
+}
+
+header h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+
+}
+
+header p {
+
+    color: #d1d5db;
+
+}
+
+
+/* =========================
+   SCOREBOARD
+========================= */
+
+.scoreboard {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 20px auto;
+
+    flex-wrap: wrap;
+
+}
+
+
+.score-card {
+
+    width: 130px;
+
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.score-card span {
+
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+
+    color: #d1d5db;
+
+}
+
+
+.score-card strong {
+
+    display: block;
+
+    font-size: 28px;
+
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+/* =========================
+   GAME MESSAGE
+========================= */
+
+#gameMessage {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin: 10px;
+
+    min-height: 28px;
+
+}
+
+
+/* =========================
+   GAME BOARD
+========================= */
+
+#gameBoard {
+
+    width: 330px;
+
+    height: 330px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    padding: 8px;
+
+    background: #020617;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* =========================
+   CELLS
+========================= */
+
+.cell {
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #1e293b;
+
+    color: white;
+
+    font-size: 65px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.cell:hover {
+
+    background: #334155;
+
+    transform: scale(1.03);
+
+}
+
+
+.cell.x {
+
+    color: #38bdf8;
+
+}
+
+
+.cell.o {
+
+    color: #f472b6;
+
+}
+
+
+.cell.winner {
+
+    background: #166534;
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================
+   RESULT BOX
+========================= */
+
+#resultBox {
+
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 20px 30px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+
+#resultTitle {
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+
+}
+
+
+#resultMessage {
+
+    color: #d1d5db;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.controls {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.controls button,
+#playAgainButton {
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    background: #facc15;
+
+    color: #111827;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.controls button:hover,
+#playAgainButton:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.1);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    margin-top: 35px;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    color: #cbd5e1;
+
+}
+
+
+footer p:first-child {
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    header h1 {
+
+        font-size: 26px;
+
+    }
+
+    header h2 {
+
+        font-size: 23px;
+
+    }
+
+    #gameBoard {
+
+        width: 285px;
+
+        height: 285px;
+
+    }
+
+    .cell {
+
+        font-size: 55px;
+
+    }
+
+    .score-card {
+
+        width: 100px;
+
+        padding: 12px;
+
+    }
+
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost World | GameZone</title>
+    <link rel="stylesheet" href="lostworld.css">
+</head>
+<body>
+
+<header>
+    <h1>🌍 LOST WORLD</h1>
+
+    <div class="game-info">
+        <span>⭐ Score: <b id="score">0</b></span>
+        <span>❤️ Lives: <b id="lives">3</b></span>
+        <span>🏆 High Score: <b id="highScore">0</b></span>
+        <span>🔥 Level: <b id="level">1</b></span>
+    </div>
+</header>
+
+<main>
+
+    <div id="gameArea">
+
+        <div class="mountain mountain1"></div>
+        <div class="mountain mountain2"></div>
+
+        <div class="tree tree1">🌴</div>
+        <div class="tree tree2">🌴</div>
+        <div class="tree tree3">🌳</div>
+
+        <div id="player">🧍</div>
+
+        <div id="treasure">💎</div>
+
+        <div id="enemy">👾</div>
+
+        <div id="obstacle">🪨</div>
+
+        <div id="startScreen">
+            <h2>🌍 LOST WORLD</h2>
+            <p>Collect 💎 and avoid 👾 🪨</p>
+            <p>Use ← → to move</p>
+            <p>Press SPACE / ↑ to jump</p>
+            <button id="startButton">START GAME</button>
+        </div>
+
+        <div id="countdown"></div>
+
+        <div id="pauseScreen">
+            <h2>⏸️ PAUSED</h2>
+            <button id="resumeButton">RESUME</button>
+        </div>
+
+        <div id="gameOverScreen">
+            <h2>💀 GAME OVER</h2>
+            <p>Your Score: <b id="finalScore">0</b></p>
+            <button id="restartButton">PLAY AGAIN</button>
+        </div>
+
+    </div>
+
+    <div class="controls">
+        <button id="leftButton">⬅️</button>
+        <button id="jumpButton">🦘</button>
+        <button id="rightButton">➡️</button>
+    </div>
+
+    <div class="buttons">
+        <button id="pauseButton">⏸️ Pause</button>
+    </div>
+
+</main>
+
+<script src="lostworld.js"></script>
+
+</body>
+</html>

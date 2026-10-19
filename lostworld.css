@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#111827, #1f2937);
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    padding: 15px;
+    background: #111827;
+}
+
+header h1 {
+    margin-bottom: 12px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+
+main {
+    padding: 20px;
+}
+
+#gameArea {
+    position: relative;
+    width: 700px;
+    max-width: 95vw;
+    height: 550px;
+    margin: auto;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #38bdf8 0%,
+            #7dd3fc 45%,
+            #86efac 46%,
+            #22c55e 100%
+        );
+
+    border: 5px solid #000;
+    border-radius: 20px;
+}
+
+/* Mountains */
+
+.mountain {
+    position: absolute;
+    bottom: 170px;
+    width: 0;
+    height: 0;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-bottom: 200px solid #64748b;
+}
+
+.mountain1 {
+    left: -80px;
+}
+
+.mountain2 {
+    right: -100px;
+    transform: scale(1.2);
+}
+
+/* Trees */
+
+.tree {
+    position: absolute;
+    font-size: 60px;
+    z-index: 2;
+}
+
+.tree1 {
+    left: 30px;
+    bottom: 125px;
+}
+
+.tree2 {
+    right: 40px;
+    bottom: 120px;
+}
+
+.tree3 {
+    left: 300px;
+    bottom: 125px;
+}
+
+/* Ground */
+
+#gameArea::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: #166534;
+    border-top: 5px solid #14532d;
+    z-index: 1;
+}
+
+/* Player */
+
+#player {
+    position: absolute;
+    bottom: 125px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 55px;
+    z-index: 10;
+    user-select: none;
+}
+
+/* Treasure */
+
+#treasure {
+    position: absolute;
+    top: -70px;
+    left: 30%;
+    font-size: 45px;
+    z-index: 8;
+    user-select: none;
+}
+
+/* Enemy */
+
+#enemy {
+    position: absolute;
+    top: -80px;
+    left: 65%;
+    font-size: 48px;
+    z-index: 8;
+    user-select: none;
+}
+
+/* Rock */
+
+#obstacle {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    font-size: 50px;
+    z-index: 8;
+    user-select: none;
+}
+
+/* Start Screen */
+
+#startScreen,
+#gameOverScreen,
+#pauseScreen {
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+
+#gameOverScreen,
+#pauseScreen {
+    display: none;
+}
+
+#startScreen h2,
+#gameOverScreen h2,
+#pauseScreen h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+#startScreen p {
+    margin: 6px;
+}
+
+/* Countdown */
+
+#countdown {
+    position: absolute;
+    inset: 0;
+    z-index: 45;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 100px;
+    font-weight: bold;
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* Buttons */
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 22px;
+    margin: 8px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+    background: #facc15;
+    color: #111827;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Controls */
+
+.controls {
+    margin-top: 15px;
+}
+
+.controls button {
+    width: 70px;
+    height: 60px;
+    font-size: 25px;
+}
+
+.buttons {
+    margin-top: 5px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    #gameArea {
+        height: 500px;
+    }
+
+    .game-info {
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    #player {
+        font-size: 45px;
+    }
+
+    #treasure {
+        font-size: 38px;
+    }
+
+    #enemy {
+        font-size: 40px;
+    }
+
+    #obstacle {
+        font-size: 42px;
+    }
+
+    #startScreen h2,
+    #gameOverScreen h2,
+    #pauseScreen h2 {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameZone | Play. Compete. Win.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- LOADING SCREEN -->
+
+<div class="loader" id="loader">
+
+    <div class="loader-content">
+
+        <div class="loader-logo">
+            GAME<span>ZONE</span> 🎮
+        </div>
+
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+
+        <p>Loading GameZone...</p>
+
+    </div>
+
+</div>
+
+    <!-- NAVBAR -->
+
+    <header>
+        <nav class="navbar">
+
+            <a href="#" class="logo">
+                GAME<span>ZONE</span> 🎮
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="login-btn">Login</button> 
+            <a href="profile.html" class="profile-btn">
+                👤 Profile
+            </a>
+            <button id="themeToggle" class="theme-btn">☀️</button>
+
+
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">WELCOME TO GAMEZONE</p>
+
+                <h1>
+                    PLAY.
+                    <span>COMPETE.</span>
+                    WIN.
+                </h1>
+
+                <p class="description">
+                    Discover amazing games, challenge your friends
+                    and become the ultimate gaming champion.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#games" class="play-btn">
+                        Explore Games 🎮
+                    </a>
+
+                    <a href="#featured" class="learn-btn">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GAMES SECTION -->
+
+        <section id="games" class="games-section scroll-reveal">
+
+            <p class="section-small-title">EXPLORE</p>
+
+            <h2>Popular Games</h2>
+
+            <!-- SEARCH -->
+
+<div class="game-controls">
+
+    <input
+        type="text"
+        id="gameSearch"
+        placeholder="🔍 Search games..."
+    >
+
+    <div class="category-buttons">
+
+        <button class="category-btn active" data-category="all">
+            All
+        </button>
+
+        <button class="category-btn" data-category="action">
+            ⚔️ Action
+        </button>
+
+        <button class="category-btn" data-category="racing">
+            🏎️ Racing
+        </button>
+
+        <button class="category-btn" data-category="adventure">
+            🗺️ Adventure
+        </button>
+
+        <button class="category-btn" data-category="Puzzle">
+           🧠 Puzzle 
+        </button>
+
+    </div>
+
+</div>
+
+            <div class="game-container">
+
+    <!-- GAME 1 -->
+    <div class="game-card"  data-category="action">
+
+        <div class="game-image action"></div>
+
+        <div class="game-info">
+            <h3>Tic Tac Toe</h3>
+            <p>⚔️ Action</p>
+            <span>⭐ 4.8</span>
+
+            <a href="tictactoe.html" class="play-game-btn">
+                Play Now 🎮
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- GAME 2 -->
+    <div class="game-card" data-category="racing">
+
+        <div class="game-image racing"></div>
+
+        <div class="game-info">
+            <h3>Speed Rush</h3>
+            <p>🏎️ Racing</p>
+            <span>⭐ 4.7</span>
+
+            <a href="speedrush.html" class="play-game-btn">
+    Play Now 🎮
+</a>
+        </div>
+
+    </div>
+
+
+    <!-- GAME 3 -->
+    <div class="game-card" data-category="adventure">
+
+        <div class="game-image adventure"></div>
+
+        <div class="game-info">
+            <h3>Lost World</h3>
+            <p>🗺️ Adventure</p>
+            <span>⭐ 4.9</span>
+
+            <a href="lostworld.html" class="play-game-btn">
+                play now 🎮
+                </a>
+        </div>
+
+    </div>
+
+    <!-- MEMORY MATCH GAME -->
+
+<div class="game-card memory-card">
+
+    <img src="memorymatchimg.jpeg" alt="Memory Match">
+
+    <div class="game-card-content">
+
+        <h3>Memory Match</h3>
+
+        <p>🧠 Puzzle</p>
+
+        <p>⭐ 4.8</p>
+
+        <a href="memorymatch.html" class="play-game-btn">
+            Play Now 🎮
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+        </section>
+
+
+       <!-- FEATURED SECTION -->
+
+<section id="featured" class="featured scroll-reveal">
+
+    <p class="section-small-title">FEATURED</p>
+
+    <h2>Game of the Week</h2>
+
+    <p id="featuredGameName">
+        Loading...
+    </p>
+
+    <p id="featuredGamePlays">
+        🔥 Loading play count...
+    </p>
+
+    <a
+        id="featuredPlayButton"
+        class="play-now"
+        href="#"
+    >
+        Play Now 🎮
+    </a>
+
+</section>
+
+
+        <!-- LEADERBOARD -->
+
+        <section id="leaderboard" class="leaderboard scroll-reveal">
+
+    <p class="section-small-title">TOP PLAYERS</p>
+
+    <h2>Leaderboard 🏆</h2>
+
+    <div class="leaderboard-box" id="leaderboardBox">
+
+        <div class ="player" data-score="9200">
+            <span>Alex</span>
+            <strong>9200</strong>
+        </div>
+
+        <div class="player" data-score="8750">
+            <span>Shadow</span>
+            <strong>8750</strong>
+        </div>
+
+        <div class="player" data-score="8000">
+            <span>Ghost</span>
+            <strong>8000</strong>
+        </div>
+
+        <div class="player" id="currentPlayer" data-score="0">
+            <span>Gamer123</span>
+            <strong id="playerScore">0</strong>
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- CONTACT SECTION -->
+
+<section id="contact" class="contact-section scroll-reveal">
+
+    <p class="section-small-title">GET IN TOUCH</p>
+
+    <h2>Contact GameZone 📩</h2>
+
+    <p class="contact-description">
+        Have a question or suggestion? Send us a message.
+    </p>
+
+    <form id="contactForm" class="contact-form">
+
+        <input
+            type="text"
+            id="contactName"
+            placeholder="Your Name"
+        >
+
+        <input
+            type="email"
+            id="contactEmail"
+            placeholder="Your Email"
+        >
+
+        <textarea
+            id="contactMessage"
+            placeholder="Your Message"
+            rows="5"
+        ></textarea>
+
+        <button type="submit">
+            Send Message 🚀
+        </button>
+
+        <p id="contactStatus"></p>
+
+    </form>
+
+</section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>GAMEZONE 🎮</h2>
+
+        <p>
+            Play. Compete. Win.
+        </p>
+
+        <p class="copyright">
+            © 2026 GameZone. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <!-- LOGIN POPUP -->
+
+<div class="login-overlay" id="loginOverlay">
+
+    <div class="login-box">
+
+        <button class="close-login" id="closeLogin">×</button>
+
+        <h2>Welcome Back 🎮</h2>
+
+        <p>Login to your GameZone account</p>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Username"
+        >
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password"
+        >
+
+        <button class="login-submit" id="loginSubmit">
+            Login
+        </button>
+
+        <p class="login-message" id="loginMessage"></p>
+
+    </div>
+
+</div>
+
+    <!-- BACK TO TOP BUTTON -->
+
+<button id="backToTop" class="back-to-top">
+    ↑
+</button>
+
+ <script src="script.js"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tic Tac Toe | GameZone</title>
+
+    <link rel="stylesheet" href="tictactoe.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>🎮 GAMEZONE</h1>
+
+        <h2>⭕ Tic Tac Toe ❌</h2>
+
+        <p>Player: ❌ X &nbsp; | &nbsp; Computer: ⭕ O</p>
+
+    </header>
+
+
+    <!-- SCOREBOARD -->
+
+    <section class="scoreboard">
+
+        <div class="score-card">
+            <span>👤 You</span>
+            <strong id="playerScore">0</strong>
+        </div>
+
+        <div class="score-card">
+            <span>🤖 Computer</span>
+            <strong id="computerScore">0</strong>
+        </div>
+
+        <div class="score-card">
+            <span>🤝 Draws</span>
+            <strong id="drawScore">0</strong>
+        </div>
+
+    </section>
+
+
+    <!-- GAME -->
+
+    <main>
+
+        <div id="gameMessage">
+            Your Turn! ❌
+        </div>
+
+
+        <div id="gameBoard">
+
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div id="resultBox">
+
+            <h2 id="resultTitle"></h2>
+
+            <p id="resultMessage"></p>
+
+            <button id="playAgainButton">
+                🔄 Play Again
+            </button>
+
+        </div>
+
+
+        <!-- CONTROLS -->
+
+        <div class="controls">
+
+            <button id="restartButton">
+                🔄 Restart
+            </button>
+
+            <button id="resetScoreButton">
+                🗑️ Reset Score
+            </button>
+
+            <button id="backButton">
+                🏠 GameZone
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>GAMEZONE 🎮</p>
+
+        <p>Play. Compete. Win.</p>
+
+        <p>© 2026 GameZone. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <script src="tictactoe.js"></script>
+
+</body>
+
+</html>
